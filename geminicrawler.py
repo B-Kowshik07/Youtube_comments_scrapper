@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.options import Options
 import google.generativeai as genai
 from webdriver_manager.chrome import ChromeDriverManager
 
-genai.configure(api_key="AIzaSyDKR9tw-EBMWzmTm85ddBPybKY_Vq4GhJY")
+genai.configure(api_key="Enter yor API_KEY here")
 
 def scrape_youtube_comments(url):
     chrome_options = Options()
@@ -78,7 +78,7 @@ def process_comments():
 def main():
     st.title('YouTube Comment Scraper and Sentiment Analysis')
     st.subheader('Scrape YouTube Comments and Classify Them as Good or Bad')
-    youtube_url = st.text_input("Enter YouTube Video URL", "https://youtu.be/YecEQhOTc6A")
+    youtube_url = st.text_input("Enter YouTube Video URL", "Give the url here")
 
     if st.button('Scrape Comments'):
         if youtube_url:
@@ -103,3 +103,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
